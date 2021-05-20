@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video Calling Application</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="flexContainer">
+        <div class="left-pane">
+            <div class="logoSmall">
+                <img class="logoElement" src="assets/agoraLogo.png" />
+            </div>
+            <span class="headingText">
+                Join a Call!
+            </span>
+            <input type="text" id="username" placeholder="Username" />
+            <input type="text" id="channelName" placeholder="Channel Name" />
+            <button class="submitButton" id="join">Join</button>
+        </div>
+        <div class="right-container">
+            <div class="right-pane">
+                <div id="SelfStream">
+
+                </div>
+                <div id="remoteStream">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.0.0.js"></script>
+    <script src="agora.js"></script>
+</body>
+
+</html>
