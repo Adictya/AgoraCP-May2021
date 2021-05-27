@@ -4,6 +4,8 @@ let handlefail = function (err) {
 
 let appId = "a6af85f840ef43108491705e2315a857";
 let globalStream;
+var isAudioMuted = false;
+var isVideoMuted = false;
 
 let client = AgoraRTC.createClient({
     mode: "live",
@@ -76,4 +78,33 @@ document.getElementById("join").onclick = function () {
         removeVideoStream(evt)
     }
     )
+}
+
+document.getElementById("video-mute").onclick = function () {
+    if (!isVideoMuted) {
+        globalStream.muteVideo();
+        isVideoMuted = true;
+    }
+    else {
+        globalStream.unmuteVideo();
+        isVideoMuted = false;
+    }
+}
+
+document.getElementById("audio-mute").onclick = function () {
+    if (!isAudioMuted) {
+        globalStream.muteAudio();
+        isAudioMuted = true;
+    }
+    else {
+        globalStream.unmuteAudio();
+        isAudioMuted = false;
+    }
+}
+
+document.getElementById("leave").onclick = function () {
+    client.leave(function () {
+        console.log("User left!");
+    }, handlefail)
+    removeMyVideoStream();
 }

@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -23,14 +26,24 @@
             <input type="text" id="username" placeholder="Username" />
             <input type="text" id="channelName" placeholder="Channel Name" />
             <button class="submitButton" id="join">Join</button>
+            <button class="submitButton" id="leave" style="background: red;">Leave</button>
         </div>
         <div class="right-container">
             <div class="right-pane">
+                <!-- Self Stream -->
                 <div id="SelfStream">
-
                 </div>
+                <!-- Remote Stream -->
                 <div id="remoteStream">
-
+                </div>
+                <!-- Control -->
+                <div class="controls">
+                    <div class="icon" id="video-mute">
+                        <i class="fa fa-video-slash fa-2x" style="color: #099dfd;"></i>
+                    </div>
+                    <div class="icon" id="audio-mute">
+                        <i class="fa fa-microphone-slash fa-2x" style="color: #099dfd;"></i>
+                    </div>
                 </div>
             </div>
         </div>
