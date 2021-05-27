@@ -12,3 +12,4 @@ a fully functional application in your portfolio!
 2. [Homework/final project submission](https://community.agora.io/join/april2021)
 3. [Agora documentation](https://docs.agora.io/en)
 4. Course complete github: https://github.com/Adictya/AgoraCP-complete
+5. [Video Recordings](https://agora.app.box.com/s/uo1kjila2j87pt9ltaieassneva54giv/folder/136392021876)
